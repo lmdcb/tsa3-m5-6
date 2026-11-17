@@ -1,0 +1,404 @@
+
+/* ========================================
+   TASKFLOW - Tasks for Today
+   ======================================== */
+
+:root {
+    --ivory: #F7F4EC;
+    --sky: #DCE8F4;
+    --gray: #8B8F98;
+    --beige: #D8C9BB;
+    --periwinkle: #8298C9;
+    --navy: #304265;
+    --white: #FFFFFF;
+    --border: #DEE2E8;
+    --light: #F9FAFC;
+    --success: #3F8068;
+    --warning: #A36B31;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Tahoma, sans-serif;
+    background: var(--ivory);
+    color: var(--navy);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation */
+
+.navbar {
+    background: var(--navy);
+    box-shadow: 0 3px 12px rgba(48, 66, 101, 0.12);
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1180px;
+    min-height: 76px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.brand {
+    color: var(--white);
+    font-size: 21px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.brand span {
+    color: var(--periwinkle);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-links a {
+    color: var(--sky);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: var(--periwinkle);
+    color: var(--white);
+}
+
+/* Main Layout */
+
+.main-container {
+    width: 90%;
+    max-width: 1180px;
+    margin: 45px auto;
+    flex: 1;
+}
+
+.page-header {
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--navy);
+}
+
+.subtitle {
+    color: var(--gray);
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.section-title {
+    font-size: 19px;
+    margin-bottom: 18px;
+}
+
+/* Cards */
+
+.card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 28px;
+    box-shadow: 0 6px 20px rgba(48, 66, 101, 0.06);
+}
+
+.card + .card {
+    margin-top: 20px;
+}
+
+/* Welcome Hero */
+
+.hero {
+    background: linear-gradient(
+        120deg,
+        var(--white),
+        var(--sky)
+    );
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 48px;
+    margin-bottom: 30px;
+}
+
+.hero-label {
+    color: var(--periwinkle);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    font-size: 14px;
+    color: #65728A;
+    max-width: 650px;
+}
+
+/* Statistics */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: var(--white);
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.stat-label {
+    color: var(--gray);
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    color: var(--navy);
+    font-size: 29px;
+    font-weight: bold;
+}
+
+/* Tables */
+
+.table-wrapper {
+    overflow-x: auto;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(48, 66, 101, 0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: var(--navy);
+}
+
+th {
+    color: var(--white);
+    font-size: 12px;
+    text-align: left;
+    padding: 17px 20px;
+}
+
+td {
+    padding: 17px 20px;
+    font-size: 13px;
+    border-bottom: 1px solid var(--border);
+}
+
+tbody tr:nth-child(even) {
+    background: var(--light);
+}
+
+tbody tr:hover {
+    background: var(--sky);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Status Badges */
+
+.status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.status-completed {
+    background: #E3F2E9;
+    color: var(--success);
+}
+
+.status-pending {
+    background: #FFF1DF;
+    color: var(--warning);
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    background: var(--periwinkle);
+    color: var(--white);
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: var(--navy);
+}
+
+/* Profile */
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 22px;
+    background: var(--sky);
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.profile-info h2 {
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.profile-info p {
+    color: var(--gray);
+    font-size: 13px;
+    margin: 6px 0;
+}
+
+/* About */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.about-label {
+    color: var(--gray);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.about-value {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Empty State */
+
+.empty-state {
+    text-align: center;
+    padding: 55px 25px;
+    color: var(--gray);
+    font-size: 13px;
+}
+
+/* Footer */
+
+.footer {
+    background: var(--navy);
+    color: var(--sky);
+    text-align: center;
+    padding: 22px;
+    font-size: 11px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        padding: 18px 0;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .nav-links a {
+        padding: 9px 11px;
+    }
+
+    .main-container {
+        margin: 28px auto;
+    }
+
+    .hero {
+        padding: 30px 24px;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .page-header h1 {
+        font-size: 26px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    th, td {
+        padding: 13px;
+    }
+}
